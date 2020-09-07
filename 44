@@ -1,0 +1,14 @@
+#PF-Assgn-44
+
+def find_duplicates(list_of_numbers):
+    duplicates_list=[]
+    list_set=set(list_of_numbers)
+    for num in list_set:
+        count=list_of_numbers.count(num)
+        if count>1:
+            duplicates_list.append(num)
+    return sorted(duplicates_list)        
+
+list_of_numbers=[1,2,2,3,3,3,4,4,4,4]
+list_of_duplicates=find_duplicates(list_of_numbers)
+print(list_of_duplicates)
